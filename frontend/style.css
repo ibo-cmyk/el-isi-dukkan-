@@ -1,4 +1,6 @@
-/* style.css - Genel Stil Dosyası (Metal Tablo Teması) */
+
+
+/* style.css - Genel Stil Dosyası (Sade Metal Teması) */
 
 /* CSS Reset - Tarayıcı varsayılan stillerini sıfırlar */
 *, *::before, *::after {
@@ -8,19 +10,19 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Google Font: Roboto - Daha modern ve okunabilir */
+    font-family: 'Inter', sans-serif; /* Google Font: Inter - Modern, temiz ve okunabilir */
     line-height: 1.6;
-    color: #343a40; /* Koyu gri metin rengi - daha zengin */
-    background-color: #f5f7f9; /* Çok açık gri/mavi arka plan - metalik his */
+    color: #333; /* Genel metin rengi: Koyu gri */
+    background-color: #f8f8f8; /* Çok açık gri arka plan - temiz ve ferah */
     -webkit-font-smoothing: antialiased; /* Fontları daha pürüzsüz yapar */
     min-height: 100vh; /* Minimum tam ekran yüksekliği */
     display: flex;
     flex-direction: column;
 }
 
-/* Google Fonts: Roboto ve Playfair Display (Başlıklar için) */
+/* Google Fonts: Inter ve Montserrat (Başlıklar ve Logo için) */
 /* Bu fontları HTML'inizin <head> bölümüne eklemeyi unutmayın:
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 */
 
 /* Kapsayıcılar */
@@ -32,59 +34,59 @@ body {
 
 /* Bağlantı Stilleri */
 a {
-    color: #4a6fa5; /* Soğuk mavi/gri link rengi */
+    color: #5a6a7a; /* Orta koyu gri/mavi link rengi */
     text-decoration: none; /* Alt çizgiyi kaldır */
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #2a4c7c; /* Hover'da daha koyu */
+    color: #34495e; /* Hover'da daha koyu */
 }
 
 /* Buton Stilleri (Genel) */
 button {
     cursor: pointer;
     border: none;
-    padding: 12px 25px; /* Hafif artırılmış padding */
-    border-radius: 6px; /* Daha yumuşak köşeler */
-    font-size: 17px; /* Hafif büyütülmüş yazı */
-    font-weight: 500;
+    padding: 12px 25px;
+    border-radius: 4px; /* Daha keskin köşeler */
+    font-size: 16px;
+    font-weight: 600; /* Daha kalın font */
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08); /* Hafif gölge */
 }
 
 button:hover {
-    transform: translateY(-3px); /* Daha belirgin kalkma efekti */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transform: translateY(-2px); /* Hafif kalkma efekti */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
 }
 
 /* Ana "Sepete Ekle" Butonu (index.html'deki büyük buton) */
 .add-to-cart-btn {
-    background-color: #343a40; /* Koyu antrasit gri - metalik */
+    background-color: #4a4a4a; /* Koyu antrasit - sade metal rengi */
     color: white;
-    padding: 18px 35px; /* Büyük padding */
-    font-size: 22px; /* Daha büyük yazı */
-    width: 100%; /* Tam genişlik */
-    display: block; /* Bloğun tamamını kapla */
-    text-transform: uppercase; /* Büyük harf */
-    letter-spacing: 0.5px; /* Hafif aralık */
+    padding: 18px 35px;
+    font-size: 20px;
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Hafif aralık */
 }
 
 .add-to-cart-btn:hover {
-    background-color: #212529; /* Daha koyu hover */
+    background-color: #2c2c2c; /* Daha koyu hover */
 }
 
 /* Küçük "Sepete Ekle" Butonu (products.html'deki kart butonları) */
 .add-to-cart-btn-small {
-    background-color: #6c757d; /* Orta gri tonu */
+    background-color: #6a6a6a; /* Orta gri - daha açık metal tonu */
     color: white;
-    padding: 12px 22px; /* Hafif artırılmış */
-    font-size: 15px; /* Hafif küçültülmüş */
+    padding: 10px 20px;
+    font-size: 15px;
     width: 100%;
 }
 
 .add-to-cart-btn-small:hover {
-    background-color: #5a6268;
+    background-color: #4a4a4a;
 }
 
 
@@ -92,8 +94,8 @@ button:hover {
 header {
     background-color: #ffffff; /* Beyaz header */
     padding: 15px 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Daha belirgin gölge */
-    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Hafif gölge */
+    border-bottom: 1px solid #eee;
 }
 
 nav {
@@ -106,12 +108,12 @@ nav {
 }
 
 .logo {
-    font-family: 'Playfair Display', serif; /* Başlık fontu */
-    font-size: 32px; /* Daha büyük logo */
+    font-family: 'Montserrat', sans-serif; /* Başlık fontu */
+    font-size: 28px;
     font-weight: 700;
-    color: #343a40; /* Koyu renk logo */
-    text-transform: none; /* Büyük harf yok */
-    letter-spacing: normal;
+    color: #333; /* Koyu renk logo */
+    text-transform: uppercase; /* Logo da büyük harf */
+    letter-spacing: 0.5px;
 }
 
 nav ul {
@@ -120,64 +122,64 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 35px; /* Menü öğeleri arası boşluk artırıldı */
+    margin-left: 30px;
 }
 
 nav ul li a {
     color: #555; /* Menü linkleri koyu gri */
-    font-size: 18px; /* Daha büyük menü yazısı */
-    font-weight: 400; /* Daha ince font */
+    font-size: 16px;
+    font-weight: 500;
     position: relative;
-    padding-bottom: 7px; /* Alt çizgi için daha fazla boşluk */
+    padding-bottom: 5px;
 }
 
 nav ul li a::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 3px; /* Alt çizgi kalınlığı artırıldı */
+    height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #4a6fa5; /* Link alt çizgi rengi - soğuk mavi/gri */
+    background-color: #6a6a6a; /* Link alt çizgi rengi - orta gri */
     transition: width 0.3s ease;
 }
 
 nav ul li a:hover::after {
-    width: 100%; /* Hover'da alt çizgi belirir */
+    width: 100%;
 }
 
 /* Main içeriği */
 main {
-    flex: 1; /* Ana içeriğin kalan boşluğu doldurmasını sağlar */
+    flex: 1;
     padding: 20px 0;
 }
 
 /* Footer */
 footer {
-    background-color: #212529; /* Çok koyu gri footer */
-    color: #f8f9fa; /* Çok açık renk metin */
+    background-color: #333; /* Koyu gri footer */
+    color: #f0f0f0; /* Açık gri metin */
     text-align: center;
-    padding: 25px 0; /* Hafif artırılmış padding */
-    margin-top: 50px; /* Daha fazla boşluk */
-    font-size: 15px;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 14px;
 }
 
 /* Ürün Detay Sayfası Bölümü */
 .product-detail-container {
     display: flex;
-    flex-wrap: wrap; /* Küçük ekranlarda alt alta geçmesini sağlar */
-    gap: 50px; /* Kolonlar arası boşluk artırıldı */
-    padding: 50px 30px; /* Padding artırıldı */
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 20px;
     background-color: #fff;
-    border-radius: 15px; /* Daha belirgin yuvarlak köşeler */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12); /* Daha belirgin gölge */
+    border-radius: 8px; /* Daha az yuvarlak */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sade gölge */
     max-width: 1200px;
-    margin: 50px auto; /* Margin artırıldı */
+    margin: 40px auto;
 }
 
 .product-images {
     flex: 1;
-    min-width: 400px; /* Minimum genişlik artırıldı */
+    min-width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -185,104 +187,99 @@ footer {
 
 .main-image {
     width: 100%;
-    max-width: 600px; /* Büyük görselin maksimum genişliği artırıldı */
+    max-width: 550px;
     height: auto;
-    border-radius: 10px; /* Daha yumuşak köşeler */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* Daha belirgin gölge */
+    border-radius: 6px; /* Daha az yuvarlak */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .thumbnail-images {
     display: flex;
-    gap: 20px; /* Thumbnail'lar arası boşluk artırıldı */
-    margin-top: 30px; /* Üst boşluk artırıldı */
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .thumbnail {
-    width: 90px; /* Boyut artırıldı */
-    height: 90px; /* Boyut artırıldı */
+    width: 80px;
+    height: 80px;
     object-fit: cover;
-    border: 3px solid #e0e0e0; /* Kalınlaştırılmış çerçeve */
-    border-radius: 8px; /* Daha yumuşak köşeler */
+    border: 2px solid #eee;
+    border-radius: 4px; /* Daha az yuvarlak */
     cursor: pointer;
-    transition: border-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: border-color 0.3s ease, transform 0.2s ease;
 }
 
 .thumbnail:hover, .thumbnail.active {
-    border-color: #4a6fa5; /* Aktif veya hover'da soğuk mavi/gri çerçeve */
-    transform: translateY(-5px); /* Daha belirgin kalkma efekti */
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    border-color: #6a6a6a; /* Aktif veya hover'da orta gri çerçeve */
+    transform: translateY(-2px);
 }
 
 .product-info {
-    flex: 1.5; /* Görsellerden daha fazla yer kaplasın */
-    min-width: 400px;
+    flex: 1.5;
+    min-width: 350px;
     display: flex;
     flex-direction: column;
 }
 
 .product-info h1 {
-    font-family: 'Playfair Display', serif; /* Başlık fontu */
-    font-size: 48px; /* Daha büyük başlık */
-    color: #212529; /* Koyu renk */
-    margin-bottom: 20px;
-    line-height: 1.1;
-    text-align: left; /* Başlık sola hizalı */
+    font-family: 'Montserrat', sans-serif; /* Başlık fontu */
+    font-size: 38px; /* Daha küçük başlık */
+    color: #222;
+    margin-bottom: 15px;
+    line-height: 1.2;
 }
 
 .price {
-    font-size: 40px; /* Daha büyük fiyat */
+    font-size: 32px; /* Daha küçük fiyat */
     font-weight: bold;
-    color: #e63946; /* Canlı kırmızı - dikkat çekici fiyat */
-    margin-bottom: 30px;
+    color: #4a4a4a; /* Koyu antrasit fiyat rengi */
+    margin-bottom: 25px;
 }
 
 .description {
-    font-size: 19px; /* Daha büyük açıklama */
+    font-size: 17px;
     color: #555;
-    margin-bottom: 35px;
-    line-height: 1.7;
+    margin-bottom: 30px;
 }
 
 .options-group {
-    margin-bottom: 25px; /* Boşluk artırıldı */
+    margin-bottom: 20px;
 }
 
 .options-group label {
     display: block;
-    font-size: 18px; /* Daha büyük label */
-    font-weight: bold;
-    margin-bottom: 10px; /* Boşluk artırıldı */
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
     color: #444;
 }
 
 .options-group select {
     width: 100%;
-    padding: 15px; /* Padding artırıldı */
-    border: 1px solid #ccc; /* Daha yumuşak border */
-    border-radius: 8px; /* Daha yumuşak köşeler */
-    font-size: 17px; /* Daha büyük font */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 15px;
     background-color: #fff;
     appearance: none;
     -webkit-appearance: none;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236c757d%22%20d%3D%22M287%2069.4L146.2%20208.6%205.4%2069.4h281.6z%22%2F%3E%3C%2Fsvg%3E'); /* Özel ok ikonu (rengi gri yapıldı) */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236a6a6a%22%20d%3D%22M287%2069.4L146.2%20208.6%205.4%2069.4h281.6z%22%2F%3E%3C%2Fsvg%3E'); /* Özel ok ikonu (rengi gri yapıldı) */
     background-repeat: no-repeat;
-    background-position: right 15px top 50%; /* Pozisyon ayarlandı */
-    background-size: 14px auto; /* Boyutu artırıldı */
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); /* İç gölge */
+    background-position: right 10px top 50%;
+    background-size: 12px auto;
 }
 
 .product-features {
-    margin-top: 40px; /* Üst boşluk artırıldı */
-    border-top: 1px solid #e0e0e0; /* Daha açık border */
-    padding-top: 30px; /* Padding artırıldı */
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 25px;
 }
 
 .product-features h3 {
-    font-family: 'Playfair Display', serif; /* Başlık fontu */
-    font-size: 28px; /* Daha büyük başlık */
-    color: #343a40; /* Koyu renk */
-    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif; /* Başlık fontu */
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
 }
 
 .product-features ul {
@@ -290,21 +287,21 @@ footer {
 }
 
 .product-features ul li {
-    font-size: 18px; /* Daha büyük font */
+    font-size: 16px;
     color: #555;
-    margin-bottom: 12px; /* Boşluk artırıldı */
+    margin-bottom: 8px;
     position: relative;
-    padding-left: 30px; /* Boşluk artırıldı */
+    padding-left: 25px;
 }
 
 .product-features ul li::before {
-    content: '▪'; /* Tik yerine modern bir nokta veya kare */
-    color: #4a6fa5; /* Soğuk mavi/gri */
+    content: '—'; /* Tik yerine düz çizgi veya kısa tire */
+    color: #6a6a6a; /* Orta gri */
     font-weight: normal;
     position: absolute;
     left: 0;
     top: 0;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.6;
 }
 
@@ -324,18 +321,18 @@ footer {
     }
 
     .product-info h1 {
-        font-size: 38px;
+        font-size: 32px;
         text-align: center;
     }
 
     .price {
-        font-size: 32px;
+        font-size: 28px;
         text-align: center;
     }
 
     .add-to-cart-btn {
         padding: 15px 25px;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .product-images {
@@ -345,7 +342,7 @@ footer {
 
 @media (max-width: 768px) {
     nav {
-        flex-direction: column; /* Mobil'de menü dikey */
+        flex-direction: column;
         align-items: flex-start;
     }
 
@@ -374,11 +371,11 @@ footer {
     }
 
     .product-info h1 {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .price {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .thumbnail-images {
@@ -388,25 +385,25 @@ footer {
     }
 
     .thumbnail {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
     }
 
     .product-features h3 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .product-features ul li {
-        font-size: 16px;
-        padding-left: 25px;
+        font-size: 15px;
+        padding-left: 20px;
     }
 
     .product-features ul li::before {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .options-group select {
-        padding: 12px;
-        font-size: 15px;
+        padding: 10px;
+        font-size: 14px;
     }
 }

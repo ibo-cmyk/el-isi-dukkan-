@@ -1,24 +1,40 @@
 const express = require('express');
-const path = require('path');
-
+const path = require('path'); // 'path' modülünü ekleyin
 const app = express();
-const port = process.env.PORT || 3000; // Render'ın dinamik portunu kullanır, yoksa 3000
+const port = process.env.PORT || 3000; // Render, PORT ortam değişkenini kullanır
 
-// Frontend dosyalarını statik olarak sunar.
-// server.js backend klasöründe, frontend klasörü ise bir üst dizinde.
-// Bu yüzden path.join(__dirname, '..', 'frontend') kullanıyoruz.
-app.use(express.static(path.join(__dirname, '..', 'frontend')));
+// Frontend dosyalarınızın bulunduğu ana dizini belirtin.
+// Bu durumda, 'backend' klasöründen bir üst seviyeye çıkıp 'frontend' klasörüne giriyoruz.
+const frontendPath = path.join(__dirname, '../frontend');
 
-// Ana sayfaya yapılan istekte index.html'i gönderir.
+// Statik dosyaları (HTML, CSS, JS, görseller) sunmak için Express'i yapılandırın
+app.use(express.static(frontendPath));
+
+// Ana sayfa için (index.html) bir rota tanımlayın
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'frontend', 'index.html'));
+    // index.html dosyasını gönderin
+    res.sendFile(path.join(frontendPath, 'index.html'));
 });
 
-// Eğer farklı bir route olursa (örneğin /api gibi), buraya eklenebilir.
-// app.get('/api/products', (req, res) => { /* ürünleri veritabanından çekme logic'i */ });
+// products.html sayfası için bir rota tanımlayın
+app.get('/products.html', (req, res) => {
+    // products.html dosyasını gönderin
+    res.sendFile(path.join(frontendPath, 'products.html'));
+});
 
-// Sunucuyu başlatma
+// Eğer başka HTML sayfalarınız varsa, onlar için de benzer rotalar ekleyebilirsiniz:
+/*
+app.get('/hakkimizda.html', (req, res) => {
+    res.sendFile(path.join(frontendPath, 'hakkimizda.html'));
+});
+app.get('/iletisim.html', (req, res) => {
+    res.sendFile(path.join(frontendPath, 'iletisim.html'));
+});
+*/
+
+// Sunucuyu başlatın
 app.listen(port, () => {
-  console.log(`Sunucu ${port} portunda çalışıyor!`);
-  console.log(`Web siteniz yayında: http://localhost:${port}`); // Yerel test için
+    console.log(`Sunucu ${port} portunda çalışıyor!`);
+    console.log(`Web siteniz yayında: http://localhost:${port}`);
+    console.log('Bu URL Render ortamında farklı olacaktır.');
 });
