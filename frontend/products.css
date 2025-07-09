@@ -1,158 +1,33 @@
 .products-page-container {
     max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 50px auto; /* style.css ile uyumlu boşluk */
+    padding: 30px; /* Daha fazla iç boşluk */
+    background-color: #ffffff; /* Beyaz arka plan */
+    border-radius: 15px; /* Daha yuvarlak köşeler */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12); /* Daha belirgin ve zarif gölge */
 }
 
 .products-page-container h1 {
+    font-family: 'Playfair Display', serif; /* style.css ile uyumlu font */
     text-align: center;
-    color: #333;
-    margin-bottom: 40px;
-    font-size: 36px;
+    color: #343a40; /* Koyu antrasit başlık rengi */
+    margin-bottom: 50px; /* Daha fazla boşluk */
+    font-size: 42px; /* Daha büyük başlık */
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Esnek ızgara düzeni */
-    gap: 30px; /* Ürün kartları arası boşluk */
+    /* Küçük ekranlarda 1, orta ekranlarda 2, büyük ekranlarda 3 veya 4 kolon */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px; /* Ürün kartları arası boşluk artırıldı */
     justify-content: center; /* Kartları ortala */
 }
 
 .product-card {
-    border: 1px solid #eee;
-    border-radius: 8px;
+    border: 1px solid #e0e0e0; /* Daha açık, zarif kenarlık */
+    border-radius: 12px; /* Daha yumuşak köşeler */
     overflow: hidden; /* Taşmaları gizle */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex; /* İçeriği dikeyde ortalamak için */
-    flex-direction: column;
-    text-decoration: none; /* Link alt çizgilerini kaldır */
-    color: inherit; /* Yazı rengini koru */
-}
-
-.product-card:hover {
-    transform: translateY(-5px); /* Hafif yukarı kaydırma efekti */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.product-card-img {
-    width: 100%;
-    height: 250px; /* Sabit yükseklik */
-    object-fit: cover; /* Görseli bozmadan sığdır */
-    display: block; /* Altındaki boşluğu kaldır */
-    border-bottom: 1px solid #eee;
-}
-
-.product-card-info {
-    padding: 15px;
-    flex-grow: 1; /* Bilgi alanının kalan boşluğu doldurmasını sağla */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Başlık, fiyat ve butonu aralıklı yerleştir */
-}
-
-.product-card-title {
-    font-size: 20px;
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.product-card-price {
-    font-size: 22px;
-    font-weight: bold;
-    color: #007bff;
-    margin-bottom: 15px;
-}
-
-.add-to-cart-btn-small {
-    background-color: #28a745; /* Yeşil tonu */
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%; /* Kart içinde tam genişlik */
-    box-sizing: border-box; /* Padding'i genişliğe dahil et */
-}
-
-.add-to-cart-btn-small:hover {
-    background-color: #218838;
-}
-
-/* responsive ayarlar */
-@media (max-width: 768px) {
-    .products-page-container {
-        padding: 15px;
-        margin: 20px auto;
-    }
-
-    .products-page-container h1 {
-        font-size: 30px;
-        margin-bottom: 30px;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 20px;
-    }
-
-    .product-card-title {
-        font-size: 18px;
-    }
-    .product-card-price {
-        font-size: 20px;
-    }
-}.add-to-cart-btn-small {
-    background-color: #28a745;
-    color: white;
-    /* padding değerlerini artırın */
-    padding: 12px 20px; /* Mevcut değeri artırdık */
-    border: none;
-    border-radius: 5px;
-    /* font-size değerini artırın */
-    font-size: 18px; /* Mevcut değeri artırdık */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%; /* Bu kart içinde tam genişlik kalabilir */
-    box-sizing: border-box;
-}
-
-.add-to-cart-btn-small:hover {
-    background-color: #218838;
-}.products-page-container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-}
-
-.products-page-container h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 40px;
-    font-size: 38px;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Esnek ızgara düzeni */
-    gap: 30px; /* Ürün kartları arası boşluk */
-    justify-content: center; /* Kartları ortala */
-}
-
-.product-card {
-    border: 1px solid #eee;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Kartlara daha belirgin gölge */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -162,20 +37,20 @@
 }
 
 .product-card:hover {
-    transform: translateY(-8px); /* Daha belirgin yukarı kaydırma */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transform: translateY(-10px); /* Daha belirgin yukarı kaydırma efekti */
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18); /* Hover'da daha belirgin ve geniş gölge */
 }
 
 .product-card-img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: 280px; /* Görsel yüksekliği artırıldı */
+    object-fit: cover; /* Görseli bozmadan sığdır */
     display: block;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #f0f0f0; /* Daha açık border */
 }
 
 .product-card-info {
-    padding: 15px;
+    padding: 20px; /* Daha fazla iç boşluk */
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -183,21 +58,81 @@
 }
 
 .product-card-title {
-    font-size: 20px;
+    font-family: 'Roboto', sans-serif; /* style.css ile uyumlu font */
+    font-size: 22px; /* Daha büyük başlık */
+    font-weight: 500;
     margin-top: 0;
-    margin-bottom: 10px;
-    color: #333;
-    min-height: 48px; /* İki satırlık başlıklar için yeterli boşluk */
+    margin-bottom: 12px; /* Boşluk artırıldı */
+    color: #343a40; /* Koyu antrasit renk */
+    min-height: 52px; /* Başlıklar için daha fazla boşluk (iki satırlık başlıklar için iyi) */
+    line-height: 1.3;
 }
 
 .product-card-price {
-    font-size: 22px;
+    font-size: 26px; /* Daha büyük fiyat */
     font-weight: bold;
-    color: #007bff;
-    margin-bottom: 15px;
+    color: #e63946; /* Canlı kırmızı - style.css'teki fiyat rengi ile uyumlu */
+    margin-bottom: 20px; /* Boşluk artırıldı */
 }
 
-/* responsive ayarlar */
+/* Küçük sepete ekle butonu - style.css'ten alınan renkler ve boyutlar */
+.add-to-cart-btn-small {
+    background-color: #6c757d; /* Orta gri tonu - style.css ile uyumlu */
+    color: white;
+    padding: 12px 22px; /* style.css ile uyumlu padding */
+    border: none;
+    border-radius: 6px; /* style.css ile uyumlu radius */
+    font-size: 16px; /* style.css ile uyumlu font-size */
+    font-weight: 500; /* style.css ile uyumlu font-weight */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* style.css ile uyumlu gölge */
+}
+
+.add-to-cart-btn-small:hover {
+    background-color: #5a6268; /* Hover rengi - style.css ile uyumlu */
+    transform: translateY(-3px); /* style.css ile uyumlu kalkma efekti */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* style.css ile uyumlu gölge */
+}
+
+/* Duyarlı Tasarım (Responsive) */
+@media (max-width: 992px) {
+    .products-page-container {
+        padding: 25px;
+        margin: 30px auto;
+    }
+
+    .products-page-container h1 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .product-card-img {
+        height: 220px;
+    }
+
+    .product-card-title {
+        font-size: 20px;
+        min-height: 48px;
+    }
+
+    .product-card-price {
+        font-size: 24px;
+    }
+
+    .add-to-cart-btn-small {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
+
 @media (max-width: 768px) {
     .products-page-container {
         padding: 15px;
@@ -210,15 +145,48 @@
     }
 
     .product-grid {
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Daha küçük ekranlar için küçültülmüş kartlar */
         gap: 20px;
+    }
+
+    .product-card-img {
+        height: 180px;
+    }
+
+    .product-card-title {
+        font-size: 17px;
+        min-height: 42px;
+    }
+
+    .product-card-price {
+        font-size: 20px;
+    }
+
+    .add-to-cart-btn-small {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-page-container {
+        padding: 10px;
+        margin: 15px auto;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Çok küçük ekranlarda tek kolon */
+        gap: 20px;
+    }
+
+    .product-card-img {
+        height: 200px;
     }
 
     .product-card-title {
         font-size: 18px;
     }
-
     .product-card-price {
-        font-size: 20px;
+        font-size: 22px;
     }
 }

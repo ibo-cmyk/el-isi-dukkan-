@@ -1,34 +1,19 @@
-Elbette, HTML dosyalarını güncelleme adımını tekrar ve daha detaylı bir şekilde anlatayım. Bu adım, sitenizin menüsünü ve sayfa yapılarını yeni tasarıma uygun hale getirmek için çok önemli.
 
-Amacımız, hem index.html (ürün detay sayfası) hem de products.html (ürün listeleme sayfası) dosyalarında tutarlı bir üst menü (header ve nav) ve ana içerik (main) yapısı oluşturmak.
-
-Adım 1: Açılacak HTML Dosyaları
-Lütfen aşağıdaki iki HTML dosyasını bir metin düzenleyiciyle (VS Code gibi) açın:
-
-el-isi-dukkani/frontend/index.html
-
-el-isi-dukkani/frontend/products.html
-
-Adım 2: index.html Dosyasını Güncelleme
-Şu anki index.html dosyanızın içindeki tüm kodu silin ve yerine aşağıdaki kodu yapıştırın. Bu kod, genel header, footer ve ürün detay sayfası içeriğini yeni tasarım sınıflarıyla birlikte içerir.
-
-HTML
 
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Yapımı Özel Tasarım Saat</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <title>Modern Metal Duvar Tablosu - Detay</title> <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
 <body>
 
     <header>
         <nav>
-            <a href="index.html" class="logo">Kasa Saatler</a> <ul>
+            <a href="index.html" class="logo">Metal Tasarım</a> <ul>
                 <li><a href="index.html">Ana Sayfa (Ürün Detay)</a></li>
-                <li><a href="products.html">Tüm Ürünler</a></li>
-                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="products.html">Tüm Tablolar</a></li> <li><a href="#">Hakkımızda</a></li>
                 <li><a href="#">İletişim</a></li>
             </ul>
         </nav>
@@ -37,47 +22,44 @@ HTML
     <main>
         <div class="product-detail-container">
             <div class="product-images">
-                <img src="images/saat-ana.jpg" alt="El Yapımı Özel Tasarım Saat" class="main-image">
+                <img src="images/tablo-ana.jpg" alt="Modern Geometrik Metal Tablo" class="main-image">
                 <div class="thumbnail-images">
-                    <img src="images/saat-ana.jpg" alt="Küçük Görsel 1" class="thumbnail active">
-                    <img src="images/saat-kucuk1.jpg" alt="Küçük Görsel 2" class="thumbnail">
-                    <img src="images/saat-kucuk2.jpg" alt="Küçük Görsel 3" class="thumbnail">
+                    <img src="images/tablo-ana.jpg" alt="Tablo Görseli 1" class="thumbnail active">
+                    <img src="images/tablo-kucuk1.jpg" alt="Tablo Görseli 2" class="thumbnail">
+                    <img src="images/tablo-kucuk2.jpg" alt="Tablo Görseli 3" class="thumbnail">
                 </div>
             </div>
             <div class="product-info">
-                <h1>El Yapımı Özel Tasarım Saat</h1>
-                <p class="price">1.250 TL</p>
-                <p class="description">Özenle seçilmiş malzemelerden, el işçiliğiyle üretilmiş bu özel tasarım saat, zamanı sadece göstermekle kalmaz, aynı zamanda bileğinizde bir sanat eseri taşır. Modern ve klasik çizgileri bir araya getiren benzersiz tasarımıyla her tarza uyum sağlar.</p>
+                <h1>Modern Geometrik Metal Duvar Tablosu</h1> <p class="price">899 TL</p> <p class="description">
+                    İç mekanlarınıza çağdaş bir dokunuş katacak bu metal duvar tablosu, geometrik desenlerin modern yorumunu sunar. Yüksek kaliteli çelikten lazer kesim tekniğiyle üretilmiş olup, mat siyah elektrostatik boya ile kaplanmıştır. Salonunuz, ofisiniz veya yatak odanız için ideal bir sanat eseridir. Hafif yapısıyla kolayca asılabilir.
+                </p>
 
                 <div class="options-group">
-                    <label for="color">Renk:</label>
-                    <select id="color">
-                        <option value="siyah">Siyah</option>
-                        <option value="kahverengi">Kahverengi</option>
-                        <option value="beyaz">Beyaz</option>
+                    <label for="size">Boyut Seçeneği:</label> <select id="size">
+                        <option value="kucuk">50x70 cm</option>
+                        <option value="orta">70x100 cm</option>
+                        <option value="buyuk">100x140 cm</option>
                     </select>
                 </div>
 
                 <div class="options-group">
-                    <label for="material">Malzeme:</label>
-                    <select id="material">
-                        <option value="deri">Deri Kayış</option>
-                        <option value="celik">Çelik Kayış</option>
-                        <option value="kumas">Kumaş Kayış</option>
+                    <label for="color">Renk Seçeneği:</label> <select id="color">
+                        <option value="matsiyah">Mat Siyah</option>
+                        <option value="antrasit">Antrasit Gri</option>
+                        <option value="bronz">Bronz (Özel Sipariş)</option>
                     </select>
                 </div>
-
+                
                 <button class="add-to-cart-btn">Sepete Ekle</button>
 
                 <div class="product-features">
-                    <h3>Ürün Özellikleri:</h3>
-                    <ul>
-                        <li>**Kadran Çapı:** 42 mm</li>
-                        <li>**Kasa Malzemesi:** Paslanmaz Çelik</li>
-                        <li>**Cam Tipi:** Safir Kristal</li>
-                        <li>**Mekanizma:** Otomatik</li>
-                        <li>**Su Geçirmezlik:** 5 ATM (El yıkama, yağmur)</li>
-                        <li>**Garanti Süresi:** 2 Yıl</li>
+                    <h3>Ürün Özellikleri:</h3> <ul>
+                        <li>**Malzeme:** 2mm Kalınlığında Yüksek Kaliteli Metal</li>
+                        <li>**Kaplama:** Elektrostatik Fırın Boya (Paslanmaz)</li>
+                        <li>**Tasarım Detayı:** Hassas Lazer Kesim</li>
+                        <li>**Kurulum:** Gizli Askı Aparatı ile Kolay Montaj</li>
+                        <li>**Temizlik:** Nemli Bezle Silinebilir</li>
+                        <li>**Garanti Süresi:** 2 Yıl Üretici Garantisi</li>
                     </ul>
                 </div>
             </div>
@@ -85,8 +67,7 @@ HTML
     </main>
 
     <footer>
-        <p>&copy; 2025 Kasa Saatler. Tüm Hakları Saklıdır.</p>
-    </footer>
+        <p>&copy; 2025 Metal Tasarım. Tüm Hakları Saklıdır.</p> </footer>
 
     <script src="script.js"></script>
 </body>
