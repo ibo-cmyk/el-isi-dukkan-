@@ -1,28 +1,26 @@
-
-
-/* style.css - Genel Stil Dosyası (Sade Metal Teması) */
+/* style.css - Genel Stil Dosyası (Belirgin Metalik Tema) */
 
 /* CSS Reset - Tarayıcı varsayılan stillerini sıfırlar */
 *, *::before, *::after {
-    box-sizing: border-box; /* Padding ve border'ı elementin genişliğine dahil et */
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: 'Inter', sans-serif; /* Google Font: Inter - Modern, temiz ve okunabilir */
+    font-family: 'Roboto', sans-serif; /* Daha endüstriyel bir his için Roboto */
     line-height: 1.6;
-    color: #333; /* Genel metin rengi: Koyu gri */
-    background-color: #f8f8f8; /* Çok açık gri arka plan - temiz ve ferah */
-    -webkit-font-smoothing: antialiased; /* Fontları daha pürüzsüz yapar */
-    min-height: 100vh; /* Minimum tam ekran yüksekliği */
+    color: #dedede; /* Açık gri metin rengi - koyu arka planlar için */
+    background: #202020; /* Kömür grisi arka plan - koyu ve endüstriyel */
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* Google Fonts: Inter ve Montserrat (Başlıklar ve Logo için) */
+/* Google Fonts: Roboto ve Oxanium (Başlıklar ve Logo için daha teknolojik) */
 /* Bu fontları HTML'inizin <head> bölümüne eklemeyi unutmayın:
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 */
 
 /* Kapsayıcılar */
@@ -34,13 +32,13 @@ body {
 
 /* Bağlantı Stilleri */
 a {
-    color: #5a6a7a; /* Orta koyu gri/mavi link rengi */
-    text-decoration: none; /* Alt çizgiyi kaldır */
+    color: #b0c4de; /* Açık mavi-gri link rengi - hafif metalik vurgu */
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #34495e; /* Hover'da daha koyu */
+    color: #e0e0e0; /* Hover'da daha açık gri */
 }
 
 /* Buton Stilleri (Genel) */
@@ -48,54 +46,57 @@ button {
     cursor: pointer;
     border: none;
     padding: 12px 25px;
-    border-radius: 4px; /* Daha keskin köşeler */
+    border-radius: 2px; /* Keskin köşeler */
     font-size: 16px;
-    font-weight: 600; /* Daha kalın font */
+    font-weight: 500;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08); /* Hafif gölge */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4); /* Daha belirgin gölge */
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 button:hover {
-    transform: translateY(-2px); /* Hafif kalkma efekti */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.6);
 }
 
 /* Ana "Sepete Ekle" Butonu (index.html'deki büyük buton) */
 .add-to-cart-btn {
-    background-color: #4a4a4a; /* Koyu antrasit - sade metal rengi */
+    background-color: #4a4a4a; /* Koyu antrasit */
     color: white;
     padding: 18px 35px;
     font-size: 20px;
     width: 100%;
     display: block;
-    text-transform: uppercase;
-    letter-spacing: 1px; /* Hafif aralık */
+    border: 1px solid #666; /* Hafif kenarlık */
 }
 
 .add-to-cart-btn:hover {
-    background-color: #2c2c2c; /* Daha koyu hover */
+    background-color: #6a6a6a; /* Hover'da hafif açılma */
+    border-color: #888;
 }
 
 /* Küçük "Sepete Ekle" Butonu (products.html'deki kart butonları) */
 .add-to-cart-btn-small {
-    background-color: #6a6a6a; /* Orta gri - daha açık metal tonu */
+    background-color: #383838; /* Biraz daha açık antrasit */
     color: white;
     padding: 10px 20px;
     font-size: 15px;
     width: 100%;
+    border: 1px solid #555;
 }
 
 .add-to-cart-btn-small:hover {
     background-color: #4a4a4a;
+    border-color: #777;
 }
-
 
 /* Header ve Navigasyon */
 header {
-    background-color: #ffffff; /* Beyaz header */
-    padding: 15px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Hafif gölge */
-    border-bottom: 1px solid #eee;
+    background-color: #2a2a2a; /* Koyu gri header */
+    padding: 18px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4); /* Daha derin gölge */
+    border-bottom: 1px solid #3d3d3d; /* Metalik çizgi efekti */
 }
 
 nav {
@@ -108,12 +109,13 @@ nav {
 }
 
 .logo {
-    font-family: 'Montserrat', sans-serif; /* Başlık fontu */
-    font-size: 28px;
+    font-family: 'Oxanium', sans-serif; /* Daha teknolojik font */
+    font-size: 32px; /* Daha belirgin logo */
     font-weight: 700;
-    color: #333; /* Koyu renk logo */
-    text-transform: uppercase; /* Logo da büyük harf */
-    letter-spacing: 0.5px;
+    color: #e0e0e0; /* Açık gri logo */
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Harfler arası boşluk */
+    text-shadow: 0 0 5px rgba(255,255,255,0.1); /* Hafif parlama */
 }
 
 nav ul {
@@ -122,15 +124,15 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 30px;
+    margin-left: 40px; /* Daha fazla boşluk */
 }
 
 nav ul li a {
-    color: #555; /* Menü linkleri koyu gri */
-    font-size: 16px;
-    font-weight: 500;
+    color: #b0c4de; /* Menü linkleri açık mavi-gri */
+    font-size: 17px;
+    font-weight: 400;
     position: relative;
-    padding-bottom: 5px;
+    padding-bottom: 7px; /* Alt çizgi için daha fazla boşluk */
 }
 
 nav ul li a::after {
@@ -140,7 +142,7 @@ nav ul li a::after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #6a6a6a; /* Link alt çizgi rengi - orta gri */
+    background-color: #889bb0; /* Link alt çizgi rengi - hafif parlak gri */
     transition: width 0.3s ease;
 }
 
@@ -151,35 +153,37 @@ nav ul li a:hover::after {
 /* Main içeriği */
 main {
     flex: 1;
-    padding: 20px 0;
+    padding: 30px 0;
 }
 
 /* Footer */
 footer {
-    background-color: #333; /* Koyu gri footer */
-    color: #f0f0f0; /* Açık gri metin */
+    background-color: #1a1a1a; /* Çok koyu gri footer */
+    color: #b0c4de; /* Açık mavi-gri metin */
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+    padding: 25px 0;
+    margin-top: 50px;
     font-size: 14px;
+    border-top: 1px solid #333;
 }
 
 /* Ürün Detay Sayfası Bölümü */
 .product-detail-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
-    padding: 40px 20px;
-    background-color: #fff;
-    border-radius: 8px; /* Daha az yuvarlak */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sade gölge */
+    gap: 50px; /* Daha fazla boşluk */
+    padding: 50px 30px;
+    background-color: #333; /* Orta koyu gri kart arka planı */
+    border-radius: 4px; /* Köşeler daha keskin */
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6); /* Daha belirgin ve endüstriyel gölge */
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 50px auto;
+    border: 1px solid #555; /* Hafif metalik kenarlık */
 }
 
 .product-images {
     flex: 1;
-    min-width: 350px;
+    min-width: 380px; /* Görsel alanı biraz büyütüldü */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -187,99 +191,104 @@ footer {
 
 .main-image {
     width: 100%;
-    max-width: 550px;
+    max-width: 600px; /* Büyük görsel */
     height: auto;
-    border-radius: 6px; /* Daha az yuvarlak */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border: 1px solid #666;
 }
 
 .thumbnail-images {
     display: flex;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 20px; /* Küçük görseller arası boşluk */
+    margin-top: 25px;
 }
 
 .thumbnail {
-    width: 80px;
-    height: 80px;
+    width: 90px; /* Küçük görseller büyütüldü */
+    height: 90px;
     object-fit: cover;
-    border: 2px solid #eee;
-    border-radius: 4px; /* Daha az yuvarlak */
+    border: 2px solid #555; /* Koyu gri kenarlık */
+    border-radius: 3px;
     cursor: pointer;
     transition: border-color 0.3s ease, transform 0.2s ease;
 }
 
 .thumbnail:hover, .thumbnail.active {
-    border-color: #6a6a6a; /* Aktif veya hover'da orta gri çerçeve */
-    transform: translateY(-2px);
+    border-color: #b0c4de; /* Aktif veya hover'da açık mavi-gri çerçeve */
+    transform: translateY(-3px); /* Daha belirgin kalkma */
 }
 
 .product-info {
     flex: 1.5;
-    min-width: 350px;
+    min-width: 380px;
     display: flex;
     flex-direction: column;
 }
 
 .product-info h1 {
-    font-family: 'Montserrat', sans-serif; /* Başlık fontu */
-    font-size: 38px; /* Daha küçük başlık */
-    color: #222;
-    margin-bottom: 15px;
+    font-family: 'Oxanium', sans-serif; /* Başlık fontu */
+    font-size: 44px; /* Daha büyük başlık */
+    color: #e0e0e0; /* Açık gri başlık */
+    margin-bottom: 20px;
     line-height: 1.2;
+    text-shadow: 0 0 8px rgba(255,255,255,0.15); /* Hafif parlama */
 }
 
 .price {
-    font-size: 32px; /* Daha küçük fiyat */
+    font-size: 38px; /* Daha büyük fiyat */
     font-weight: bold;
-    color: #4a4a4a; /* Koyu antrasit fiyat rengi */
-    margin-bottom: 25px;
+    color: #6d93cc; /* Daha belirgin mavi-gri fiyat rengi */
+    margin-bottom: 30px;
+    text-shadow: 0 0 5px rgba(109,147,204,0.3);
 }
 
 .description {
-    font-size: 17px;
-    color: #555;
-    margin-bottom: 30px;
+    font-size: 18px;
+    color: #c0c0c0; /* Açık gri açıklama */
+    margin-bottom: 35px;
 }
 
 .options-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .options-group label {
     display: block;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #444;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #e0e0e0;
 }
 
 .options-group select {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 15px;
-    background-color: #fff;
+    padding: 14px;
+    border: 1px solid #666; /* Daha koyu kenarlık */
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: #444; /* Koyu gri arka plan */
+    color: #e0e0e0; /* Açık gri metin */
     appearance: none;
     -webkit-appearance: none;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236a6a6a%22%20d%3D%22M287%2069.4L146.2%20208.6%205.4%2069.4h281.6z%22%2F%3E%3C%2Fsvg%3E'); /* Özel ok ikonu (rengi gri yapıldı) */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23b0c4de%22%20d%3D%22M287%2069.4L146.2%20208.6%205.4%2069.4h281.6z%22%2F%3E%3C%2Fsvg%3E'); /* Açık mavi-gri ok ikonu */
     background-repeat: no-repeat;
-    background-position: right 10px top 50%;
-    background-size: 12px auto;
+    background-position: right 15px center;
+    background-size: 15px auto;
 }
 
 .product-features {
-    margin-top: 30px;
-    border-top: 1px solid #eee;
-    padding-top: 25px;
+    margin-top: 40px;
+    border-top: 1px solid #555; /* Koyu metalik çizgi */
+    padding-top: 30px;
 }
 
 .product-features h3 {
-    font-family: 'Montserrat', sans-serif; /* Başlık fontu */
-    font-size: 22px;
-    color: #333;
-    margin-bottom: 15px;
+    font-family: 'Oxanium', sans-serif; /* Başlık fontu */
+    font-size: 26px;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px rgba(255,255,255,0.1);
 }
 
 .product-features ul {
@@ -287,32 +296,32 @@ footer {
 }
 
 .product-features ul li {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 8px;
+    font-size: 17px;
+    color: #c0c0c0;
+    margin-bottom: 10px;
     position: relative;
-    padding-left: 25px;
+    padding-left: 30px;
 }
 
 .product-features ul li::before {
-    content: '—'; /* Tik yerine düz çizgi veya kısa tire */
-    color: #6a6a6a; /* Orta gri */
-    font-weight: normal;
+    content: '\2022'; /* Koyu bir nokta */
+    color: #b0c4de; /* Mavi-gri vurgu */
+    font-weight: bold;
     position: absolute;
     left: 0;
     top: 0;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.6;
 }
 
-/* Duyarlı Tasarım (Responsive) - Mobile İlk Yaklaşım */
+/* Duyarlı Tasarım (Responsive) */
 @media (max-width: 992px) {
     .product-detail-container {
         flex-direction: column;
         align-items: center;
         gap: 30px;
-        padding: 30px 15px;
-        margin: 20px auto;
+        padding: 30px 20px;
+        margin: 30px auto;
     }
 
     .product-images, .product-info {
@@ -321,12 +330,12 @@ footer {
     }
 
     .product-info h1 {
-        font-size: 32px;
+        font-size: 38px;
         text-align: center;
     }
 
     .price {
-        font-size: 28px;
+        font-size: 32px;
         text-align: center;
     }
 
@@ -335,8 +344,13 @@ footer {
         font-size: 18px;
     }
 
-    .product-images {
-        min-width: unset;
+    .thumbnail-images {
+        gap: 15px;
+    }
+
+    .thumbnail {
+        width: 80px;
+        height: 80px;
     }
 }
 
@@ -366,16 +380,16 @@ footer {
     }
 
     .product-detail-container {
-        padding: 20px 15px;
+        padding: 25px 15px;
         gap: 20px;
     }
 
     .product-info h1 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .price {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .thumbnail-images {
@@ -390,20 +404,29 @@ footer {
     }
 
     .product-features h3 {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .product-features ul li {
-        font-size: 15px;
-        padding-left: 20px;
+        font-size: 16px;
+        padding-left: 25px;
     }
 
     .product-features ul li::before {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .options-group select {
-        padding: 10px;
-        font-size: 14px;
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .product-card-img {
+        height: 200px;
     }
 }
