@@ -1,7 +1,31 @@
- <header>
+Elbette, HTML dosyalarını güncelleme adımını tekrar ve daha detaylı bir şekilde anlatayım. Bu adım, sitenizin menüsünü ve sayfa yapılarını yeni tasarıma uygun hale getirmek için çok önemli.
+
+Amacımız, hem index.html (ürün detay sayfası) hem de products.html (ürün listeleme sayfası) dosyalarında tutarlı bir üst menü (header ve nav) ve ana içerik (main) yapısı oluşturmak.
+
+Adım 1: Açılacak HTML Dosyaları
+Lütfen aşağıdaki iki HTML dosyasını bir metin düzenleyiciyle (VS Code gibi) açın:
+
+el-isi-dukkani/frontend/index.html
+
+el-isi-dukkani/frontend/products.html
+
+Adım 2: index.html Dosyasını Güncelleme
+Şu anki index.html dosyanızın içindeki tüm kodu silin ve yerine aşağıdaki kodu yapıştırın. Bu kod, genel header, footer ve ürün detay sayfası içeriğini yeni tasarım sınıflarıyla birlikte içerir.
+
+HTML
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Yapımı Özel Tasarım Saat</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <header>
         <nav>
-            <a href="index.html" class="logo">Duo Tasarım</a>
-            <ul>
+            <a href="index.html" class="logo">Kasa Saatler</a> <ul>
                 <li><a href="index.html">Ana Sayfa (Ürün Detay)</a></li>
                 <li><a href="products.html">Tüm Ürünler</a></li>
                 <li><a href="#">Hakkımızda</a></li>
@@ -9,3 +33,61 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        <div class="product-detail-container">
+            <div class="product-images">
+                <img src="images/saat-ana.jpg" alt="El Yapımı Özel Tasarım Saat" class="main-image">
+                <div class="thumbnail-images">
+                    <img src="images/saat-ana.jpg" alt="Küçük Görsel 1" class="thumbnail active">
+                    <img src="images/saat-kucuk1.jpg" alt="Küçük Görsel 2" class="thumbnail">
+                    <img src="images/saat-kucuk2.jpg" alt="Küçük Görsel 3" class="thumbnail">
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>El Yapımı Özel Tasarım Saat</h1>
+                <p class="price">1.250 TL</p>
+                <p class="description">Özenle seçilmiş malzemelerden, el işçiliğiyle üretilmiş bu özel tasarım saat, zamanı sadece göstermekle kalmaz, aynı zamanda bileğinizde bir sanat eseri taşır. Modern ve klasik çizgileri bir araya getiren benzersiz tasarımıyla her tarza uyum sağlar.</p>
+
+                <div class="options-group">
+                    <label for="color">Renk:</label>
+                    <select id="color">
+                        <option value="siyah">Siyah</option>
+                        <option value="kahverengi">Kahverengi</option>
+                        <option value="beyaz">Beyaz</option>
+                    </select>
+                </div>
+
+                <div class="options-group">
+                    <label for="material">Malzeme:</label>
+                    <select id="material">
+                        <option value="deri">Deri Kayış</option>
+                        <option value="celik">Çelik Kayış</option>
+                        <option value="kumas">Kumaş Kayış</option>
+                    </select>
+                </div>
+
+                <button class="add-to-cart-btn">Sepete Ekle</button>
+
+                <div class="product-features">
+                    <h3>Ürün Özellikleri:</h3>
+                    <ul>
+                        <li>**Kadran Çapı:** 42 mm</li>
+                        <li>**Kasa Malzemesi:** Paslanmaz Çelik</li>
+                        <li>**Cam Tipi:** Safir Kristal</li>
+                        <li>**Mekanizma:** Otomatik</li>
+                        <li>**Su Geçirmezlik:** 5 ATM (El yıkama, yağmur)</li>
+                        <li>**Garanti Süresi:** 2 Yıl</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kasa Saatler. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
