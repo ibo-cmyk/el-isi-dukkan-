@@ -105,8 +105,24 @@
     .product-card-title {
         font-size: 18px;
     }
-
     .product-card-price {
         font-size: 20px;
     }
+}.add-to-cart-btn-small {
+    background-color: #28a745;
+    color: white;
+    /* padding değerlerini artırın */
+    padding: 12px 20px; /* Mevcut değeri artırdık */
+    border: none;
+    border-radius: 5px;
+    /* font-size değerini artırın */
+    font-size: 18px; /* Mevcut değeri artırdık */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Bu kart içinde tam genişlik kalabilir */
+    box-sizing: border-box;
+}
+
+.add-to-cart-btn-small:hover {
+    background-color: #218838;
 }

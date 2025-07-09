@@ -1,0 +1,19 @@
+.add-to-cart-btn {
+    background-color: #007bff;
+    color: white;
+    /* padding değerlerini artırın */
+    padding: 18px 35px; /* Dikey padding 18px, Yatay padding 35px */
+    border: none;
+    border-radius: 5px;
+    /* font-size değerini artırın */
+    font-size: 20px; /* Yazı boyutunu büyütün */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto; /* Genişliği oto yapın veya belirli bir yüzde verin */
+    display: inline-block; /* Veya block */
+    box-sizing: border-box; /* Padding ve border'ı genişliğe dahil et */
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
